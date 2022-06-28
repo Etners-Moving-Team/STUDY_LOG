@@ -279,8 +279,7 @@ def sol6058():
 # 6059 : [기초-비트단위논리연산] 비트단위로 NOT 하여 출력하기(설명)(py)
 def sol6059():
     n=int(input())
-
-    print('%X'%n)
+    print(~n)
     """
     입력 된 정수를 비트단위로 참/거짓을 바꾼 후 정수로 출력해보자.
     비트단위(bitwise)연산자 ~ 를 붙이면 된다.(~ : tilde, 틸드라고 읽는다.)      
@@ -323,87 +322,269 @@ def sol6059():
     ~n = -n - 1
     -n = ~n + 1 과 같은 관계로 표현할 수 있다.
     """
-
-
-# 
+# 6060 : [기초-비트단위논리연산] 비트단위로 AND 하여 출력하기(설명)(py)
 def sol6060():
-# 
+    a,b=map(int,input().split())
+    print(a&b)
+# 6061 : [기초-비트단위논리연산] 비트단위로 OR 하여 출력하기(설명)(py)
 def sol6061():
-# 
+    a,b=map(int,input().split())
+    print(a|b)
+# 6062 : [기초-비트단위논리연산] 비트단위로 XOR 하여 출력하기(설명)(py)
 def sol6062():
-# 
+    a,b=map(int,input().split())
+    print(a^b)
+# 6063 : [기초-3항연산] 정수 2개 입력받아 큰 값 출력하기(설명)(py)
 def sol6063():
-# 
+    a,b=map(int,input().split())
+    print(int(a if (a>=b) else b))
+# 6064 : [기초-3항연산] 정수 3개 입력받아 가장 작은 값 출력하기(설명)(py)
 def sol6064():
-# 
+    a,b,c=map(int,input().split())
+    print(int((a if a<b else b) if ((a if a<b else b)<c) else c))
+# 6065 : [기초-조건/선택실행구조] 정수 3개 입력받아 짝수만 출력하기(설명)(py)
 def sol6065():
-# 
+    a,b,c=list(map(int,input().split()))
+    if a%2 == 0: print(a)
+    if b%2 == 0: print(b)
+    if c%2 == 0: print(c)
+# 6066 : [기초-조건/선택실행구조] 정수 3개 입력받아 짝/홀 출력하기(설명)(py)
 def sol6066():
-# 
+    a,b,c=list(map(int,input().split()))
+    if a%2 == 0: print("even")
+    else: print("odd")
+    if b%2 == 0: print("even")
+    else: print("odd")
+    if c%2 == 0: print("even")
+    else: print("odd")
+# 6067 : [기초-조건/선택실행구조] 정수 1개 입력받아 분류하기(설명)(py)
 def sol6067():
-# 
+    n = int(input())
+    if n<0:
+        if n%2==0: print('A')
+        else: print('B')
+    else:
+        if n%2==0: print('C')
+        else: print('D')
+# 6068 : [기초-조건/선택실행구조] 점수 입력받아 평가 출력하기(설명)(py)
 def sol6068():
-# 
+    score = int(input())
+    if (score>=90): print('A')
+    elif(90>score>=70): print('B')
+    elif(79>score>=40): print('C')
+    else: print('D')
+# 6069 : [기초-조건/선택실행구조] 평가 입력받아 다르게 출력하기(py)
 def sol6069():
-# 
+    a = input()
+    if a=='A': print("best!!!")
+    elif a=='B': print("good!!")
+    elif a=='C': print('run!')
+    elif a=='D': print("slowly~")
+    else: print("what?")
+# 6070 : [기초-조건/선택실행구조] 월 입력받아 계절 출력하기(설명)(py)
 def sol6070():
-# 
+    m = int(input())
+    if (m//3==0) or (m//3==4): print("winter")
+    if (m//3==1): print("spring")
+    if (m//3==2): print("summer")
+    if (m//3==3): print("fall")
+# 6071 : [기초-반복실행구조] 0 입력될 때까지 무한 출력하기(설명)(py)
 def sol6071():
-# 
+    n = 1
+    while n!=0:
+        n = int(input())
+        if n!=0: print(n)
+# 6072 : [기초-반복실행구조] 정수 1개 입력받아 카운트다운 출력하기1(설명)(py)
 def sol6072():
-# 
+    n = int(input())
+    while n!=0:
+        print(n)
+        n=n-1
+# 6073 : [기초-반복실행구조] 정수 1개 입력받아 카운트다운 출력하기2(py)
 def sol6073():
-# 
+    n = int(input())
+    while n>0:
+        print(n-1)
+        n=n-1
+# 6074 : [기초-반복실행구조] 문자 1개 입력받아 알파벳 출력하기(설명)(py)
 def sol6074():
-# 
+    c = ord(input()) # ord(), 문자를 정수값으로
+    t = ord('a') 
+    while t<=c :
+        print(chr(t), end=' ') # chr(), 정수값을 문자로
+        t += 1
+# 6075 : [기초-반복실행구조] 정수 1개 입력받아 그 수까지 출력하기1(py)
 def sol6075():
-# 
+    n = int(input())
+    a = 0
+    while a<=n:
+        print(a)
+        a=a+1
+# 6076 : [기초-반복실행구조] 정수 1개 입력받아 그 수까지 출력하기2(설명)(py)
 def sol6076():
-#
+    n = int(input())
+    for i in range(n+1) :
+        print(i)    
+# 6077 : [기초-종합] 짝수 합 구하기(설명)(py)
 def sol6077():
-#
+    n = int(input())
+    s = 0
+    for i in range(1, n+1) :
+        if i%2==0 :
+            s += i
+    print(int(s))
+# 6078 : [기초-종합] 원하는 문자가 입력될 때까지 반복 출력하기(py)
 def sol6078():
-#
+    c = ''
+    while c!="q":
+        c=input()
+        print(c)
+# 6079 : [기초-종합] 언제까지 더해야 할까?(py)
 def sol6079():
-#
+    n = int(input())
+    s=0
+    for i in range(1,n):
+        s=s+i
+        if s>=n: 
+            print(i)
+            break
+# 6080 : [기초-종합] 주사위 2개 던지기(설명)(py)
 def sol6080():
-#
+    n,m=map(int,input().split())
+    for i in range(1, n+1) :
+      for j in range(1, m+1) :
+        print(i, j)
+# 6081 : [기초-종합] 16진수 구구단 출력하기(py)
 def sol6081():
-#
+    n = int(input(),16) # 16진수로 입력 받기
+    for i in range(1,16):
+        print('%X'%n, '*%X'%i, '=%X'%(n*i), sep='')
+# 6082 : [기초-종합] 3 6 9 게임의 왕이 되자(설명)(py)
 def sol6082():
-#
+    n = int(input())
+    for i in range(1, n+1) :
+        if i//10==3 : print("X", end=' ')
+        elif i%10==3 : print("X", end=' ')
+        elif i%10==6 : print("X", end=' ')
+        elif i%10==9 : print("X", end=' ')
+        else: print(i)
+# 6083 : [기초-종합] 빛 섞어 색 만들기(설명)(py)
 def sol6083():
-#
+    r,g,b=map(int,input().split())
+    cnt=0
+    for i in range(r):
+        for j in range(g):
+            for k in range(b):
+                print(i,j,k)
+                cnt=cnt+1
+    print(cnt)
+# 6084 : [기초-종합] 소리 파일 저장용량 계산하기(py)
 def sol6084():
-#
+    h, b, c, s = map(int, input().split())
+    print(format((h*b*c*s)/8/1024/1024,".1f"),"MB")
+# 6085 : [기초-종합] 그림 파일 저장용량 계산하기(py)
 def sol6085():
-#
+    w, h, b = map(int, input().split())
+    print(format((w*h*b)/8/1024/1024,".2f"),"MB")
+# 6086 : [기초-종합] 거기까지! 이제 그만~(설명)(py)
 def sol6086():
-#
+    n = int(input())
+    s = 0
+    c = 1
+    while True :
+        s += c
+        c += 1
+        if s>=n :
+            break   
+    print(s)
+# 6087 : [기초-종합] 3의 배수는 통과(설명)(py)
 def sol6087():
-#
+    n = int(input())
+    for i in range(1, n+1) :
+        if i%3==0 :
+            continue            
+        print(i, end=' ')
+# 6088 : [기초-종합] 수 나열하기1(py)
 def sol6088():
-#
+    a,d,n = map(int,input().split())
+    print(a+d*(n-1))  
+# 6089 : [기초-종합] 수 나열하기2(py)
 def sol6089():
-#
+    a,r,n = map(int,input().split())
+    print(a*(r**(n-1)))
+# 6090 : [기초-종합] 수 나열하기3(py)
 def sol6090():
-#
+    a,m,d,n = map(int,input().split())
+    for _ in range(1,n):
+        a = a*m+d
+    print(a)
+# 6091 : [기초-종합] 함께 문제 푸는 날(설명)(py)
 def sol6091():
-#
+    a,b,c=map(int,input().split())
+    d = 1
+    while d%a!=0 or d%b!=0 or d%c!=0 :
+        d += 1
+    print(d)
+# 6092 : [기초-리스트] 이상한 출석 번호 부르기1(설명)(py)
 def sol6092():
-#
+    n = int(input())
+    a = list(map(int,input().split()))
+    d = list()
+
+    for i in range(24):
+        d.append(0)
+
+    for i in range(n):
+        d[a[i]]+=1
+         
+    for i in range(1,24):
+        print(d[i], end=' ')
+# 6093 : [기초-리스트] 이상한 출석 번호 부르기2(py)
 def sol6093():
-#
+    n = int(input())
+    a = list(map(int,input().split()))
+    for i in range(n-1, -1, -1) :
+        print(a[i], end=' ')
+# 6094 : [기초-리스트] 이상한 출석 번호 부르기3(py)
 def sol6094():
-#
+    int(input())
+    a = list(map(int,input().split()))
+    print(min(a)) 
+# 6095 : [기초-리스트] 바둑판에 흰 돌 놓기(설명)(py)
 def sol6095():
-#
+    d=[]
+    for i in range(20):
+        d.append([])
+        for j in range(20):
+            d[i].append(0)
+    
+    n = int(input())
+    for i in range(n):
+        x,y=input().split()
+        d[int(x)][int(y)]=1
+
+    for i in range(1,20):
+        for j in range(1,20):
+            print(d[i][j], end=' ')
+        print()
+# 6096 : [기초-리스트] 바둑알 십자 뒤집기(py)
 def sol6096():
+
+    for i in range(n) :
+        x,y=input().split()
+        for j in range(1, 20) :
+            if d[j][int(y)]==0 :
+                d[j][int(y)]=1
+            else :
+                d[j][int(y)]=0
+
+        if d[int(x)][j]==0 :
+            d[int(x)][j]=1
+        else :
+            d[int(x)][j]=0
+
+            
 #
 def sol6097():
 #
 def sol6098():
-#
-def sol6099():
-#
-def sol6100():
