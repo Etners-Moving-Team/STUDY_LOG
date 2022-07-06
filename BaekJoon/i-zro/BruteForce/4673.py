@@ -10,7 +10,6 @@ def solution():
 
         ans_set.add(up_word)
     
-
     for i in sorted(num_set.difference(ans_set)):
         print(i)
 solution()
